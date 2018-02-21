@@ -1,6 +1,10 @@
 <?php
-function declOfNum($number, $one, $two, $tree)
+function declOfNum($number, array $fields)
 {
+    $one=$fields[0];
+    $two=$fields[1];
+    $tree=$fields[2];
+
     echo $number . ' ';
 
     $last_number = $number % 10;
@@ -20,7 +24,7 @@ function declOfNum($number, $one, $two, $tree)
 function test()
 {
     for ($i = 0; $i < 36; $i += 1) {
-        declOfNum($i, 'элемент', 'элемента', 'элементов');
+        declOfNum($i, ['элемент', 'элемента', 'элементов']);
     }
 }
 
